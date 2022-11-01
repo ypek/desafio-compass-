@@ -14,6 +14,6 @@ Quando('clicar no botao de aumentar a quantidade de item no carrinho') do
 end
   
 Então('a quantidade deverá aumentar corretamente') do
-  expect(@cart_page).to have_content('2')
+  expect(@cart_page.qtd_item_display.text).to eql '1'
 end
 

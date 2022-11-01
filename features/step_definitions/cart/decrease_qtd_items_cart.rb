@@ -4,5 +4,5 @@ Quando('clicar no botao de diminuir a quantidade de item no carrinho') do
   end
   
   Então('a quantidade deverá diminuir corretamente') do
-    expect(@cart_page).to have_content('1')
+    expect(@cart_page.qtd_item_display.text).to eql '1'
   end
