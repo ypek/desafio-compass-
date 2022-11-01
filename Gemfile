@@ -6,4 +6,6 @@ gem 'site_prism'
 gem 'selenium-webdriver'
 gem 'rspec'
 gem 'faker'
+gem 'json'
+gem 'jsonpath'
 

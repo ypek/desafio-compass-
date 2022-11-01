@@ -1,1 +1,7 @@
-product_name: ventilador
+product_names:
+  - name: "Ventilador de Teto Loren Sid Diplomata Primor M2 - 3 Pás 3 Velocidades Branco 2 Lâmpadas"
+    id: 1
+  - name: "Mouse Gamer Multilaser USB 3200 DPI Warrior Grafite"
+    id: 2
+  - name: "Tablet Infantil Philco Batman PTB7SSGBT 7” - 3G Wi-Fi 16GB Android 9 GO Câmera Integrada"
+    id: 3

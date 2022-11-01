@@ -1,22 +1,21 @@
 Dado('estar na home da livelo') do
-  @Home = Home.new
-  @Home.load
+    @home_page = HomePage.new
+    @home_page.load
 end
 
-Quando('pesquisar por um produto') do 
-  @Home.search_field.set 'ventilador'
-  @Home.btn_search.click
+Quando('pesquisar por um produto') do
+  @home_page.search_for(Factory::Static.get_random_products_names)
 end
 
 Quando('selecionar a primeira opção') do
-  @Home.first_item.click
+  @home_page.click_on_product_results
 end
 
 Quando('clicar em Adicionar ao carrinho') do
-  @Home.add_to_cart.click
-  find.element('#cc-prodDetails-refusePriceClubeDiscount').click
+  @home_page.add_to_cart
+  @home_page.click_no_descount
 end
 
 Então('o produto deve ser Adicionado ao carrinho corretamente') do
-  expect(@home).to have_content('Resumo do pedido')
+  expect(@home_page).to have_content('Resumo do pedido')
 end

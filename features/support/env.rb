@@ -4,6 +4,7 @@ require 'capybara/cucumber'
 require 'site_prism'
 require 'selenium-webdriver'
 require 'rspec'
+require 'pry'
 
 ENVIRONMENT = ENV['ENVIRONMENT']
 ENVIRONMENT_CONFIG = YAML.load_file(File.dirname(__FILE__) + "/environment/#{ENVIRONMENT}.yml")
@@ -22,4 +23,5 @@ Capybara.register_driver :my_chrome do |app|
 end
 
 Capybara.default_driver = :my_chrome
+Capybara.default_max_wait_time = 10
 Capybara.app_host = URL
