@@ -1,7 +1,6 @@
 Quando('clicar no botao de remover item do carrinho') do
     @cart_page = CartPage.new
     @cart_page.remove_product
-    binding.pry
   end
   
   Então('o item deverá ser removido corretamente') do
