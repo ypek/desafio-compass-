@@ -7,7 +7,14 @@ class CartPage < SitePrism::Page
   elements :btn_decreese, '.icon-minus'
   elements :btn_remove, '[id^="remove-ci"]'
   element :qtd_item_display, '[id^="qtd-ci"]'
-  
+  element :descount_fild, '[id^="cc-cupom-field"]' 
+  element :btn_apply_descount, '[id^="cc-cart-cupom-trigger"]' 
+
+  def add_descount
+    descount_fild.set 'cupom invalido'
+    descount_fild.send_keys :enter
+  end
+
   def remove_product
     btn_remove[0].click
   end

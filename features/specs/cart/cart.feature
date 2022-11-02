@@ -41,3 +41,11 @@ Cenário: Continuar comprando
   Quando clicar no botao de continuar comprando
   Então deverá retornar o usuário a home do site
 
+@add_descount_error
+Cenário: Adicionar um desconto com erro
+  Dado ter um item add ao carrinho
+  Quando clicar no campo de desconto
+  E digitar um cupom inválido
+  Então deverá retornar uma msg de erro ao usuario
+
+
